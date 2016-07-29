@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cz7-Bs-FAN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Animations-->
+        <scene sceneID="vB8-DI-vOB">
+            <objects>
+                <viewController id="4BG-Tx-Wa6" userLabel="Animations" customClass="AnimationsViewController" customModule="UI_Playground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uYV-Oy-NPQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="b9E-Rd-OcW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zxm-RD-jjs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t80-yR-tlI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="animated-screw-0.gif" translatesAutoresizingMaskIntoConstraints="NO" id="nhD-wB-zgY">
+                                        <rect key="frame" x="0.0" y="20" width="600" height="511"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nhD-wB-zgY" secondAttribute="bottom" id="HLy-bA-N4h"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhD-wB-zgY" secondAttribute="trailing" id="ce6-AE-CtP"/>
+                                    <constraint firstItem="nhD-wB-zgY" firstAttribute="top" secondItem="t80-yR-tlI" secondAttribute="top" constant="20" id="nPk-KX-uxs"/>
+                                    <constraint firstItem="nhD-wB-zgY" firstAttribute="leading" secondItem="t80-yR-tlI" secondAttribute="leading" id="y94-Pq-yDB"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="G1s-kT-z2l" appends="YES" id="E2I-GR-FyP"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="t80-yR-tlI" firstAttribute="bottom" secondItem="b9E-Rd-OcW" secondAttribute="top" id="1cd-Ff-8c0"/>
+                            <constraint firstItem="t80-yR-tlI" firstAttribute="top" secondItem="uYV-Oy-NPQ" secondAttribute="bottom" id="5Lk-Kg-4gk"/>
+                            <constraint firstAttribute="trailing" secondItem="t80-yR-tlI" secondAttribute="trailing" id="5rH-gK-qV9"/>
+                            <constraint firstItem="t80-yR-tlI" firstAttribute="leading" secondItem="Zxm-RD-jjs" secondAttribute="leading" id="MsD-d8-B8K"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZPS-Rr-VWj" appends="YES" id="eVl-mh-8HI"/>
+                            <outletCollection property="gestureRecognizers" destination="XfE-zK-nNn" appends="YES" id="EGl-0a-oCG"/>
+                            <outletCollection property="gestureRecognizers" destination="kcm-hy-twl" appends="YES" id="Mih-h4-38y"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qzn-ve-g7T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="SHl-h8-jeo">
+                            <connections>
+                                <action selector="touchDone:" destination="4BG-Tx-Wa6" id="46E-wn-iPT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="nhD-wB-zgY" id="uzg-pt-GgS"/>
+                        <outlet property="parentView" destination="t80-yR-tlI" id="RMW-lj-EqS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyD-4x-RNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZPS-Rr-VWj">
+                    <connections>
+                        <action selector="tapImage:" destination="4BG-Tx-Wa6" id="MWo-SN-O8f"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer cancelsTouchesInView="NO" minimumNumberOfTouches="1" id="XfE-zK-nNn">
+                    <connections>
+                        <action selector="panImage:" destination="4BG-Tx-Wa6" id="tkd-eo-OaE"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="kcm-hy-twl">
+                    <connections>
+                        <action selector="pinchImage:" destination="4BG-Tx-Wa6" id="bVv-NU-TpM"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="G1s-kT-z2l">
+                    <connections>
+                        <action selector="longPress:" destination="4BG-Tx-Wa6" id="haZ-sR-seA"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1512" y="682"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gBD-CN-aEL">
+            <objects>
+                <viewController id="Cz7-Bs-FAN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PW0-lp-pV4"/>
+                        <viewControllerLayoutGuide type="bottom" id="cFy-FW-VXA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dz0-V3-Gfh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-9a-80O">
+                                <rect key="frame" x="168.5" y="70" width="263" height="39"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="Animation / Gestures"/>
+                                <connections>
+                                    <segue destination="o6Y-O0-tdS" kind="showDetail" id="a8M-pA-Qkn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ey2-9a-80O" firstAttribute="top" secondItem="PW0-lp-pV4" secondAttribute="bottom" constant="50" id="0lX-Gx-bXD"/>
+                            <constraint firstItem="Ey2-9a-80O" firstAttribute="centerX" secondItem="Dz0-V3-Gfh" secondAttribute="centerX" id="JDU-nz-5w1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zrt-cs-pRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="179"/>
+        </scene>
+        <!--Animations-->
+        <scene sceneID="uZl-9m-W6O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o6Y-O0-tdS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Animations" id="hf1-gq-lQh" userLabel="Animations"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mgl-4g-Rrq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4BG-Tx-Wa6" kind="relationship" relationship="rootViewController" id="8cT-XO-Glp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niw-de-6yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="animated-screw-0.gif" width="500" height="500"/>
+    </resources>
+</document>

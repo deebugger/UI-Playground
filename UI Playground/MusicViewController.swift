@@ -51,7 +51,6 @@ class MusicViewController: UIViewController {
     }
     
     @IBAction func tap(sender: UITapGestureRecognizer) {
-        print("tap: \(getState())")
         switch mpc.playbackState {
         case .Playing:
             mpc.pause()
@@ -78,20 +77,4 @@ class MusicViewController: UIViewController {
         lblAlbum.text = mpc.nowPlayingItem?.albumTitle ?? ""
     }
     
-    private func getState() -> String? {
-        switch mpc.playbackState {
-        case .Interrupted:
-            return "Interrupted"
-        case .Paused:
-            return "Paused"
-        case .Playing:
-            return "Playing"
-        case .SeekingBackward:
-            return "SeekingBackward"
-        case .SeekingForward:
-            return "SeekingForward"
-        case .Stopped:
-            return "Stopped"
-        }
-    }
 }

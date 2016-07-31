@@ -40,10 +40,6 @@ class AnimationsViewController: UIViewController {
         stopAnimation()
     }
     
-    @IBAction func touchDone(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     // stop the animation when the user taps on the image
     @IBAction func tapImage(sender: UITapGestureRecognizer) {
         stopAnimation()

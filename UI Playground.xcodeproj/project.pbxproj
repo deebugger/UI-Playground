@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D75840901D4DD220001E6C48 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D758408F1D4DD220001E6C48 /* AudioViewController.swift */; };
 		D75840921D4DD2CD001E6C48 /* Tiny Dancer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D75840911D4DD2CD001E6C48 /* Tiny Dancer.mp3 */; };
+		D75840941D4E1C0C001E6C48 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75840931D4E1C0C001E6C48 /* MusicViewController.swift */; };
 		D780E0411D4BFE3C002D0B5D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780E0401D4BFE3C002D0B5D /* MapsViewController.swift */; };
 		D7D8B9721D4CAE0B004BC29D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8B9711D4CAE0B004BC29D /* MainTableViewController.swift */; };
 		D7DD3E011D4B4D2F005EEC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD3E001D4B4D2F005EEC3E /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		D758408F1D4DD220001E6C48 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		D75840911D4DD2CD001E6C48 /* Tiny Dancer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Tiny Dancer.mp3"; sourceTree = "<group>"; };
+		D75840931D4E1C0C001E6C48 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		D780E0401D4BFE3C002D0B5D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		D7D8B9711D4CAE0B004BC29D /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		D7DD3DFD1D4B4D2E005EEC3E /* UI Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UI Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				D7DD3E151D4B6AD1005EEC3E /* AnimationsViewController.swift */,
 				D780E0401D4BFE3C002D0B5D /* MapsViewController.swift */,
 				D758408F1D4DD220001E6C48 /* AudioViewController.swift */,
+				D75840931D4E1C0C001E6C48 /* MusicViewController.swift */,
 				D7DD3E5F1D4B6C94005EEC3E /* Media */,
 				D7DD3E121D4B4D44005EEC3E /* Supporting Files */,
 			);
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75840941D4E1C0C001E6C48 /* MusicViewController.swift in Sources */,
 				D7D8B9721D4CAE0B004BC29D /* MainTableViewController.swift in Sources */,
 				D780E0411D4BFE3C002D0B5D /* MapsViewController.swift in Sources */,
 				D7DD3E161D4B6AD1005EEC3E /* AnimationsViewController.swift in Sources */,

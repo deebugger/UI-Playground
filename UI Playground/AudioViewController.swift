@@ -8,18 +8,13 @@
 
 import UIKit
 import AVFoundation
-import MediaPlayer
 
 class AudioViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var btnPlayPause: UIButton!
     @IBOutlet weak var sliderLocation: UISlider!
     
-    @IBOutlet weak var btnSystemPlayPause: UIButton!
-    
     private var tinyDancerPlayer: AVAudioPlayer = AVAudioPlayer()
-    
-    private var mpcontroller = MPMusicPlayerController.systemMusicPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,20 +37,6 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewWillDisappear(animated)
         
         tinyDancerPlayer.pause()
-        updateUI()
-    }
-    
-    @IBAction func touchSystemPlayPause(sender: UIButton) {
-        switch mpcontroller.playbackState {
-        case .Playing:
-            mpcontroller.pause()
-            btnSystemPlayPause.setTitle("Play", forState: .Normal)
-        case .Paused, .Stopped:
-            mpcontroller.play()
-            btnSystemPlayPause.setTitle("Pause", forState: .Normal)
-        default:
-            break
-        }
         updateUI()
     }
     
